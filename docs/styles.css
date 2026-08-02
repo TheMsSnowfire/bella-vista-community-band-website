@@ -2,13 +2,8 @@ a {
   text-decoration: none;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
   font-size: 19px;
   font-weight: 400;
   line-height: 35px;
@@ -37,9 +32,18 @@ img {
 }
 
 .copyRight {
-  color:gray;
-  font-size:16px;
+  color: gray;
+  font-size: 16px;
   margin-top: 0px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-self: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  width: min(1373px, calc(100% - 40px));
 }
 
 .header {
@@ -53,7 +57,7 @@ img {
   justify-content: space-evenly;
 }
 
-.mainContent{
+.mainContent {
   margin-left: 210px;
   margin-right: 210px;
   padding: 20px;
