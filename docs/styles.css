@@ -51,10 +51,25 @@ img {
   margin-top: 32px;
 }
 
+.horizontalFields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .icons {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
+}
+
+.just-validate-error-label {
+  color: #d9534f;
+  font-size: 12px;
+  display: block;
+}
+.just-validate-error-field {
+  border: 1px solid #d9534f !important;
+  background-color: #fff8f8;
 }
 
 .mainContent {
