@@ -50,6 +50,11 @@ img {
   width: min(1373px, calc(100% - 40px));
 }
 
+#hamburger {
+  display: none;
+  cursor: pointer;
+}
+
 .header {
   margin-bottom: 32px;
   margin-top: 32px;
@@ -92,9 +97,10 @@ img {
   padding: 20px;
 }
 
-.nav {
+.navItem {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: row;
   margin-top: 16px;
   margin-left: 0;
   padding-left: 0;
@@ -103,4 +109,26 @@ img {
 #active {
   color: black;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  #hamburger {
+    display: block;
+    font-size: large;
+    margin-top: 16px;
+  }
+
+  #nav {
+    display: none; /* Hide default inline menu */
+  }
+
+  /* When JS adds the 'active' class, show the mobile menu */
+  #nav.active {
+    display: flex;
+  }
+
+  .navItem {
+    flex-direction: column;
+    margin-left: 16px;
+  }
 }
